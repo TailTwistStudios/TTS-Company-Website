@@ -3,8 +3,10 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10rem;
   pointer-events: none;
+  translate: -5rem 0;
+  scale: 2;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -15,11 +17,11 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 2rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -32,7 +34,39 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.horizontal-box {
+  height: auto;
+  min-height: 20rem;
+  width: 100%;
+}
+.horizontal-box-right {
+  align-content: center;
+}
+
+.horizontal-box-text {
+  width: 50%;
+  color: white;
+  min-height: 20rem;
+  align-content: center;
+}
+
+.horizontal-box-text-left {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 82%, rgba(0, 212, 255, 0) 100%);
+  padding-right: 5rem;
+}
+
+.horizontal-box-text-right {
+  margin-left: 45%;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(-90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 82%, rgba(0, 212, 255, 0) 100%);
+  padding: 1rem;
+  padding-left: 5%;
+
 }
