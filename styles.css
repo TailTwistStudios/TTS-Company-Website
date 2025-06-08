@@ -1,0 +1,132 @@
+
+html {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    /* background-image: url(https://place-hold.it/2048x1080); */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body {
+    height: 100%;
+    width: fit-content;
+    align-content: center;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    margin: 0;
+}
+
+@font-face {
+    font-family: alien-moon;
+    src: url(./font/AlientMoon/AlienMoon.otf)
+}
+
+
+
+h1 {
+    text-align: center;
+}
+
+.title-block {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding-right: 3rem;
+    margin-bottom: 5rem;
+
+    font-family: alien-moon, Lucidia Console, monospace;
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    
+
+    img.logo {
+        width: 10rem;
+
+        animation-name: spin;
+        animation-duration: 5000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+
+
+#link-buttons {
+    width: fit-content;
+    margin-bottom: 3rem;
+    position: relative;
+
+    a {
+        color: inherit;
+        text-decoration: inherit;
+        
+    }
+    
+    li {
+        display: flex;
+        font-size: 1.5rem;
+        background-color: black;
+        margin-top: 1rem;
+        list-style: none;
+        border: 0.1rem solid gray;
+        padding-right: 1rem;
+        text-decoration: none;
+
+        
+
+        .selection-dot {
+            visibility: hidden;
+            color:transparent;
+            text-shadow: 0 0 0px white;
+            align-self: center;
+            width: 1.5rem;
+            height: 1.5rem;
+            margin: 0.2rem;
+            margin-left: 0.3rem;
+        }
+    }
+    li:hover {
+        border-color: white;
+
+        .selection-dot {
+            padding-right: 0;
+            visibility: visible;
+        }
+    }
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+
+    p {
+        margin: 0;
+    }
+    
+
+    .subtext {
+        font-size: 0.8rem;
+        color:lightgray;
+        
+    }
+    a {
+        text-decoration: inherit;
+        color: inherit;
+    }
+    a:hover {
+        color:white;
+    }
+}
